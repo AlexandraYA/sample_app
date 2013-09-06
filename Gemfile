@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 #ruby-gemset=railstutorial_rails_3_2_13
+gem 'bootstrap-sass', '2.3.2.0'
 
 gem 'rails', '3.2.13'
 

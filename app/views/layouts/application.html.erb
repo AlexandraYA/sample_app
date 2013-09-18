@@ -6,8 +6,16 @@
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script type="text/javascript">
+		var n = 140;
+		$("#count_characters").text(n + " characters");
+		$("#micropost_content").keyup( function() {
+			var value = $(this).val();
+			n = 140 - value.length;
+			var descr = (n == 1) ? " character" : " characters";
+			$("#count_characters").text(n + word);
+		});
+	</script>
     <%= render 'layouts/shim' %>
   </head>
   <body>
